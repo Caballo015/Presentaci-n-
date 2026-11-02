@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jorge Luis Alfonso Valdés — Especialista en Redes</title>
+<meta name="description" content="Especialista en redes e infraestructura ISP. Diseño, despliegue y operación de redes inalámbricas y cableadas, MikroTik RouterOS, enlaces PtP/PtMP y soporte técnico.">
+<meta name="theme-color" content="#060b12">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-wifi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></symbol>
+    <symbol id="i-router" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="20" height="8" rx="2"/><line x1="6" y1="12" x2="6" y2="12"/><line x1="10" y1="12" x2="10" y2="12"/><line x1="18" y1="12" x2="18" y2="12"/><path d="M6 8V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/></symbol>
+    <symbol id="i-radar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 10 10"/><path d="M12 6a6 6 0 0 1 6 6"/><circle cx="12" cy="12" r="1.5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+    <symbol id="i-support" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
+    <symbol id="i-grad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-loc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="Inicio">
+      <span class="brand-mark">JLA</span>
+      <span>Jorge Luis Alfonso</span>
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false"><svg><use href="#i-menu"/></svg></button>
+    <ul class="nav-links">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#certs">Formación</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn btn-ghost btn-sm" href="CV_Jorge_Luis_Alfonso_Valdes.pdf" download>
+        <svg><use href="#i-download"/></svg> Descargar CV
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <canvas id="net" aria-hidden="true"></canvas>
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> Disponible para nuevos proyectos</span>
+        <h1>Redes que <span class="accent">funcionan</span>.<br>Sin caídas.</h1>
+        <p>Especialista en redes e infraestructura ISP. Diseño, despliegue y operación de redes inalámbricas y cableadas, MikroTik RouterOS, enlaces punto a punto y soporte técnico directo al usuario final.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#proyectos">Ver proyectos <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="#contacto">Hablemos <svg><use href="#i-mail"/></svg></a>
+        </div>
+        <div class="hero-facts">
+          <div class="fact"><strong>8+ años</strong><span>operando redes de acceso</span></div>
+          <div class="fact"><strong>ISP / WISP</strong><span>micro-redes residenciales</span></div>
+          <div class="fact"><strong>MikroTik</strong><span>RouterOS · WinBox · Queues</span></div>
+          <div class="fact"><strong>L1 – L2</strong><span>soporte y diagnóstico</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="link-wrap">
+          <svg class="link-scene" viewBox="0 0 640 440" role="img" aria-label="Enlace inalámbrico punto a punto entre dos antenas">
+            <defs>
+              <linearGradient id="mastGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#2dd4bf" stop-opacity=".95"/>
+                <stop offset="1" stop-color="#38bdf8" stop-opacity=".18"/>
+              </linearGradient>
+              <linearGradient id="beamGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#2dd4bf"/>
+                <stop offset="1" stop-color="#38bdf8"/>
+              </linearGradient>
+              <radialGradient id="glowGrad">
+                <stop offset="0" stop-color="#2dd4bf" stop-opacity=".5"/>
+                <stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+              </radialGradient>
+              <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+                <feGaussianBlur stdDeviation="3.5" result="b"/>
+                <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+
+            <circle cx="120" cy="163" r="120" fill="url(#glowGrad)" opacity=".22"/>
+            <circle cx="520" cy="133" r="120" fill="url(#glowGrad)" opacity=".22"/>
+
+            <g class="ground">
+              <line x1="10" y1="330" x2="630" y2="330"/>
+              <line x1="320" y1="330" x2="0" y2="440"/>
+              <line x1="320" y1="330" x2="110" y2="440"/>
+              <line x1="320" y1="330" x2="220" y2="440"/>
+              <line x1="320" y1="330" x2="320" y2="440"/>
+              <line x1="320" y1="330" x2="420" y2="440"/>
+              <line x1="320" y1="330" x2="530" y2="440"/>
+              <line x1="320" y1="330" x2="640" y2="440"/>
+              <line x1="20" y1="352" x2="620" y2="352"/>
+              <line x1="10" y1="378" x2="630" y2="378"/>
+              <line x1="0" y1="410" x2="640" y2="410"/>
+            </g>
+
+            <g class="tower">
+              <path d="M120 330 L120 168"/>
+              <path d="M112 330 L117 170 M128 330 L123 170"/>
+              <path d="M113 310 L127 296 M114 286 L126 272 M115 262 L125 248 M116 238 L124 224 M117 214 L123 200"/>
+              <rect x="113" y="146" width="14" height="30" rx="3" transform="rotate(-8 120 161)"/>
+              <circle cx="120" cy="163" r="3.5" class="tip"/>
+            </g>
+
+            <g class="tower">
+              <path d="M520 330 L520 138"/>
+              <path d="M512 330 L517 140 M528 330 L523 140"/>
+              <path d="M513 308 L527 294 M514 284 L526 270 M515 260 L525 246 M516 236 L524 222 M517 212 L523 198 M518 188 L522 174"/>
+              <rect x="513" y="116" width="14" height="30" rx="3" transform="rotate(8 520 131)"/>
+              <circle cx="520" cy="133" r="3.5" class="tip"/>
+            </g>
+
+            <g class="arcs">
+              <path d="M146 125 A46 46 0 0 1 146 201"/>
+              <path d="M164 101 A76 76 0 0 1 164 225"/>
+              <path d="M181 76 A106 106 0 0 1 181 250"/>
+              <path d="M494 95 A46 46 0 0 0 494 171"/>
+              <path d="M476 71 A76 76 0 0 0 476 195"/>
+              <path d="M459 46 A106 106 0 0 0 459 220"/>
+            </g>
+
+            <path class="beam-glow" d="M150 163 L490 133"/>
+            <path class="beam" d="M150 163 L490 133"/>
+
+            <circle class="packet" r="3">
+              <animateMotion dur="4s" repeatCount="indefinite" path="M150 163 L490 133" begin="0s"/>
+            </circle>
+            <circle class="packet" r="2.5">
+              <animateMotion dur="4s" repeatCount="indefinite" path="M150 163 L490 133" begin="1.3s"/>
+            </circle>
+            <circle class="packet" r="2.5">
+              <animateMotion dur="4s" repeatCount="indefinite" path="M150 163 L490 133" begin="2.6s"/>
+            </circle>
+          </svg>
+
+          <span class="scene-chip chip-tl">PtP · 5 GHz</span>
+          <span class="scene-chip chip-tr"><span class="dot"></span> Enlace estable</span>
+        </div>
+
+        <div class="code-card code-card--compact" aria-hidden="true">
+          <div class="code-head">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <div class="code-title">routeros — link config</div>
+          </div>
+          <pre class="code-body"><code><span class="line"><span class="cmd">/interface wireguard</span> <span class="arg">add</span> name=wg0 listen-port=13231</span>
+<span class="line"><span class="cmd">/ip firewall nat</span> <span class="arg">add</span> chain=srcnat action=masquerade</span>
+<span class="line"><span class="cmd">/queue simple</span> <span class="arg">add</span> max-limit=20M/20M</span>
+<span class="line"><span class="cmd">/tool netwatch</span> <span class="arg">add</span> host=8.8.8.8 interval=30s</span></code></pre>
+          <div class="code-foot">
+            <span>hotspot · vpn · qos</span>
+            <span class="status-pill">link up</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow-sm">Servicios</span>
+        <h2>Lo que construyo y opero</h2>
+        <p>De la arquitectura al soporte diario: redes de acceso, enlaces inalámbricos y políticas de tráfico para que el servicio sea estable y predecible.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service reveal">
+          <div class="service-icon"><svg><use href="#i-wifi"/></svg></div>
+          <h3>Diseño de redes ISP / WISP</h3>
+          <p>Arquitectura de acceso inalámbrico y cableado para comunidades y pequeñas operadoras, desde el direccionamiento hasta la operación.</p>
+        </article>
+        <article class="service reveal">
+          <div class="service-icon"><svg><use href="#i-router"/></svg></div>
+          <h3>MikroTik &amp; RouterOS</h3>
+          <p>Firewall, NAT, DHCP, DNS, enrutamiento estático, VPN (WireGuard) y control de ancho de banda con Simple Queues y QoS.</p>
+        </article>
+        <article class="service reveal">
+          <div class="service-icon"><svg><use href="#i-link"/></svg></div>
+          <h3>Enlaces inalámbricos PtP / PtMP</h3>
+          <p>Planificación, alineación de antenas, selección de canales y optimización de potencia para backhaul estable.</p>
+        </article>
+        <article class="service reveal">
+          <div class="service-icon"><svg><use href="#i-radar"/></svg></div>
+          <h3>Monitorización proactiva</h3>
+          <p>Sondas Netwatch, The Dude Client y Bandwidth Test, comprobaciones periódicas y alertas para detectar caídas antes de que afecten al cliente.</p>
+        </article>
+        <article class="service reveal">
+          <div class="service-icon"><svg><use href="#i-shield"/></svg></div>
+          <h3>Seguridad perimetral</h3>
+          <p>Filtrado por reglas, segmentación de red y control de accesos para reducir superficie de ataque.</p>
+        </article>
+        <article class="service reveal">
+          <div class="service-icon"><svg><use href="#i-support"/></svg></div>
+          <h3>Soporte técnico L1 – L2</h3>
+          <p>Diagnóstico de incidencias, resolución de problemas de conectividad y atención directa al usuario final.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section id="stack">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow-sm">Stack técnico</span>
+        <h2>Herramientas con las que trabajo</h2>
+        <p>Conocimiento práctico adquirido operando redes reales, no solo en laboratorio.</p>
+      </div>
+      <div class="stack-grid">
+        <div class="stack-col reveal">
+          <h3><svg width="16" height="16"><use href="#i-router"/></svg> Infraestructura</h3>
+          <ul>
+            <li>TCP/IP · IPv4 / IPv6</li>
+            <li>Subnetting · VLAN · NAT</li>
+            <li>DHCP · DNS · Enrutamiento estático</li>
+            <li>VPN (WireGuard) · Hotspot</li>
+            <li>QoS · Simple Queues · Firewall</li>
+            <li>MikroTik RouterOS · WinBox</li>
+          </ul>
+        </div>
+        <div class="stack-col reveal">
+          <h3><svg width="16" height="16"><use href="#i-radar"/></svg> Operación y soporte</h3>
+          <ul>
+            <li>Wireshark · Ping · Traceroute</li>
+            <li>Netwatch · The Dude Client · Bandwidth Test</li>
+            <li>SSH · iPerf · Pruebas de velocidad</li>
+            <li>Switches · Access points · Antenas PtP/PtMP</li>
+            <li>Cableado estructurado</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tags reveal" style="margin-top:22px">
+        <span class="tag">Autonomía</span><span class="tag">Resolución de problemas</span>
+        <span class="tag">Orientación al cliente</span><span class="tag">Gestión de incidencias</span>
+        <span class="tag">Mejora continua</span><span class="tag">Documentación técnica</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow-sm">Proyectos</span>
+        <h2>Trabajo que he entregado</h2>
+        <p>Casos reales de diseño, despliegue y operación de redes de acceso.</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project reveal">
+          <div class="project-top"><svg><use href="#i-wifi"/></svg></div>
+          <div class="project-body">
+            <h3>Micro-ISP residencial</h3>
+            <p>Red inalámbrica y cableada para distribución de Internet a usuarios residenciales, con QoS, control de ancho de banda y soporte L1/L2.</p>
+            <div class="project-tags"><span class="tag">RouterOS</span><span class="tag">QoS</span><span class="tag">DHCP/NAT</span></div>
+          </div>
+        </article>
+        <article class="project reveal">
+          <div class="project-top"><svg><use href="#i-link"/></svg></div>
+          <div class="project-body">
+            <h3>Backhaul PtP / PtMP</h3>
+            <p>Planificación de enlaces, alineación de antenas y ajuste de potencia/canales para maximizar rendimiento y reducir interferencias.</p>
+            <div class="project-tags"><span class="tag">RF</span><span class="tag">PtP/PtMP</span><span class="tag">Optimización</span></div>
+          </div>
+        </article>
+        <article class="project reveal">
+          <div class="project-top"><svg><use href="#i-radar"/></svg></div>
+          <div class="project-body">
+            <h3>Monitorización proactiva</h3>
+            <p>Implantación de sondas Netwatch y rutinas de comprobación para detectar caídas antes de que afecten al cliente y reducir MTTR.</p>
+            <div class="project-tags"><span class="tag">Netwatch</span><span class="tag">Alertas</span><span class="tag">Disponibilidad</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMACIÓN -->
+  <section id="certs">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow-sm">Formación y credenciales</span>
+        <h2>Formación autodidacta</h2>
+        <p>Aprendizaje continuo construido con documentación oficial, laboratorio propio y operación real de redes.</p>
+      </div>
+      <div class="certs-grid">
+        <div class="cert reveal">
+          <h3>Formación autodidacta</h3>
+          <div class="org">Redes e infraestructura</div>
+          <p>TCP/IP, subnetting, enrutamiento, firewall y QoS aprendidos de forma práctica y documentada.</p>
+        </div>
+        <div class="cert reveal">
+          <h3>MikroTik RouterOS</h3>
+          <div class="org">Configuración y operación</div>
+          <p>DHCP, NAT, Hotspot, VPN (WireGuard), Simple Queues y enrutamiento estático.</p>
+        </div>
+        <div class="cert reveal">
+          <h3>Monitorización</h3>
+          <div class="org">The Dude Client · Bandwidth Test</div>
+          <p>Supervisión de enlaces, análisis de rendimiento y diagnóstico de incidencias.</p>
+        </div>
+      </div>
+      <div class="edu reveal">
+        <div class="edu-icon"><svg><use href="#i-grad"/></svg></div>
+        <div>
+          <h3>Aprendizaje continuo y autodidacta</h3>
+          <p>Documentación oficial, laboratorio propio y resolución de casos reales como método de formación permanente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-left reveal">
+          <span class="eyebrow-sm">Contacto</span>
+          <h2>¿Hablamos de tu red?</h2>
+          <p>Si necesitas diseñar, mejorar u operar una red de acceso, escríbeme. Respondo en menos de 24 h hábiles.</p>
+          <a class="contact-email" href="mailto:lalfonso6587@gmail.com">
+            <svg><use href="#i-mail"/></svg> lalfonso6587@gmail.com
+          </a>
+          <div class="contact-meta">
+            <span><svg><use href="#i-clock"/></svg> Respuesta en menos de 24 h hábiles</span>
+            <span><svg><use href="#i-loc"/></svg> Trabajo remoto y presencial</span>
+            <span><svg><use href="#i-download"/></svg> <a href="CV_Jorge_Luis_Alfonso_Valdes.pdf" download>Descargar currículo (PDF)</a></span>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="field">
+            <label for="f-name">Nombre</label>
+            <input id="f-name" name="name" type="text" placeholder="Tu nombre" autocomplete="name" required>
+            <div class="err">Introduce un nombre válido (mín. 2 caracteres).</div>
+          </div>
+          <div class="field">
+            <label for="f-email">Correo</label>
+            <input id="f-email" name="email" type="email" placeholder="tu@correo.com" autocomplete="email" required>
+            <div class="err">Introduce un correo válido.</div>
+          </div>
+          <div class="field">
+            <label for="f-msg">Mensaje</label>
+            <textarea id="f-msg" name="message" placeholder="Cuéntame qué necesitas…" required></textarea>
+            <div class="err">El mensaje debe tener al menos 10 caracteres.</div>
+          </div>
+          <div class="form-foot">
+            <span class="form-note">Los datos se usan solo para responder.</span>
+            <button type="submit" class="btn btn-primary">Enviar mensaje <svg><use href="#i-arrow"/></svg></button>
+          </div>
+          <div class="form-success" id="form-success"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>© <span id="year">2026</span> Jorge Luis Alfonso Valdés · Especialista en Redes</span>
+    <div class="footer-links">
+      <a href="mailto:lalfonso6587@gmail.com">Correo</a>
+      <a href="CV_Jorge_Luis_Alfonso_Valdes.pdf" download>CV (PDF)</a>
+      <a href="#top">Volver arriba</a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
